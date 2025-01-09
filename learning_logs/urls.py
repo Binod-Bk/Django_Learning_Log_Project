@@ -9,4 +9,6 @@ urlpatterns = [
     path('',views.index, name='index'),
     path('',views.about_us, name='about_us'),
     path('topics/',views.topics, name='topics'),
+    #Detail page for a single topic. (id)
+    path('topics/<int:topic_id>/',views.topic, name='topic'),
 ]
