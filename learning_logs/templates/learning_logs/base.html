@@ -10,3 +10,11 @@
 </p>
 
 {% block content %}{% endblock content %}
+
+<hr/>
+{% if user.is_authenticated %}
+    <form action="{% url 'accounts:logout' %}" method="post">
+        {% csrf_token %}
+        <button name="submit">Log Out</button>
+    </form>
+{% endif %}
